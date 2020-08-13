@@ -1,0 +1,10 @@
+---
+- hosts: linuxservers
+  become: true
+  tasks:
+    - name: Installing node JS
+      command: sh /playbooks/setup_14.x
+    - name: executing the nodejs
+      yum:
+        name: nodejs
+        state: present

@@ -1,0 +1,9 @@
+---
+- host: all
+  task:
+   - name: "checking ping"
+     ping:
+   - name: "Installing httpd"
+     yum:
+     - name: httpd
+     - state: present

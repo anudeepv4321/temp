@@ -1,0 +1,10 @@
+---
+- hosts: linuxservers
+  remote_user: ansible
+  become: yes
+  tasks:
+    - name: install tree pacakage
+      yum:
+        name: tree
+        state: present
+

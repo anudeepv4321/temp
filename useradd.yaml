@@ -1,0 +1,13 @@
+---
+- hosts: linuxservers
+  become: true
+  vars:
+    usermod_args:
+      name: testuser
+      state: present
+      update_password: always
+  tasks:
+  - user: '{{ usermod_args }}'
+  
+  
+       
